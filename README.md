@@ -1,7 +1,7 @@
 # NuevoProyecto
 
 I had never made a proyect like this, I have previously used CAD or arduino in class projects but never a complete implemented one, so this hackpad seemed like a decent idea for a first approximation to this field.
-I wanted to keep it simple as i had never done anything similar, so i kept it with four keys and two leds, as in the blueprint's guided project.
+I wanted to keep it simple as i had never done anything similar, so i kept it with four keys and two leds, as in the blueprint's guided project. Also i didn´t try new things as I don't know how electronics work, i wanted to make this project to begin to understand this kind of possibilities and maybe in the future try creating something completely on my own.
 
 ## Functions
 
