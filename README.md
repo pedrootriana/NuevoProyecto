@@ -1,77 +1,55 @@
-# Hackpad RP2040: Teclado Macro Programable
+# NuevoProyecto
 
-Documentación y archivos de diseño para un macropad con 4 teclas, para el programa Hack Club Blueprint. El proyecto incluye el diseño electrónico (PCB) en KiCad, el diseño mecánico en Fusion 360 y la implementación del firmware en CircuitPython utilizando KMK.
+Nunca habia hecho un proyecto de este tipo, habia utilizado algo de CAD en proyectos de clase pero nunca algo tan completo asi que como primer contacto me parecia una buena idea.
+Quise mantenerlo simple ya que nunca habia hecho nada asi, asi que lo mantuve con cuatro teclas y dos leds, como el del proyecto guiado de blueprint.
 
-## Especificaciones Técnicas
+## Funciones
 
-* **Microcontrolador:** Seeed Studio XIAO RP2040.
-* **Interfaz:** USB Tipo-C.
-* **Firmware:** KMK (basado en CircuitPython).
-* **Entrada:** 4 interruptores mecánicos Cherry MX.
-* **Indicadores:** 2 LEDs RGB SK6812 MINI-E.
-* **Funcionalidad:** Soporte para múltiples capas mediante Hold-Tap.
+Utilice dos capas, una para controlar la multimedia (pausar, pasar cancion, controlar volumen), y otra para utilidades de windows (copiar, pegar, multitarea y deshacer). Para ir de una capa a otra hay que mantener una de las teclas pulsadas. Para indicar en que capa estas he utilizado las leds, verde para multimedia y azul para windows.
 
-## Documentación Visual
+## Diseño
 
-### 1. Renderizado Final
-<img width="865" height="581" alt="Captura de pantalla 2025-12-09 124717" src="https://github.com/user-attachments/assets/95d33212-a004-4c1d-9045-47bb68e33ea3" />
 
-Vista de la carcasa y componentes.
 
-### 2. Esquema Electrónico
-<img width="528" height="416" alt="Captura de pantalla 2025-12-09 124858" src="https://github.com/user-attachments/assets/8a3f6e10-c036-4dac-b63e-53943704cf66" />
+La carcasa la hice con fusion, lo mantuve basico como indicaba el tutorial.
 
-Diagrama de conexiones.
+<img width="865" height="581" alt="Captura de pantalla 2025-12-09 124717" src="https://github.com/user-attachments/assets/eecdfef2-deee-4e00-b6cb-ac3e1ef0db64" />
 
-### 3. Diseño de PCB
-<img width="596" height="749" alt="Captura de pantalla 2025-12-09 124839" src="https://github.com/user-attachments/assets/17221959-ae7e-4cb8-a673-895d737d7c4d" />
 
-Disposición de componentes.
 
----
+El esquema lo hice con KiCAD, que tampoco lo habia utilizado nunca.
 
-## Lista de Materiales (BOM)
+<img width="528" height="416" alt="Captura de pantalla 2025-12-09 124858" src="https://github.com/user-attachments/assets/d4004971-f438-429b-aa12-e33a80fe27f2" />
 
-Componentes necesarios:
 
-| Cantidad | Componente | Especificaciones |
-| :---: | :--- | :--- |
-| 1 | Seeed XIAO RP2040 | Microcontrolador principal. |
-| 4 | Interruptores Mecánicos | Compatibles con footprint Cherry MX (3-pin/5-pin). |
-| 4 | Keycaps | Perfil DSA (1u). |
-| 2 | LEDs RGB | SK6812 MINI-E (Montaje en reverso). |
-| 1 | Carcasa | Impresión 3D (PLA o PETG). |
-| 4 | Tornillos | M3 x 16mm. |
-| 4 | Tuercas | M3 Hexagonales. |
-| 1 | Cable USB | Tipo C a Tipo A/C. |
 
----
+Y la placa con KiCAD de nuevo.
 
-## Mapa de Teclas y Funcionalidad
+<img width="596" height="749" alt="Captura de pantalla 2025-12-09 124839" src="https://github.com/user-attachments/assets/e93c7547-c008-4b5e-88b2-2d90357833dc" />
 
-El dispositivo funciona con dos capas lógicas.  Utilizando el interruptor **SW1** (Superior Izquierdo), con doble función: pulsar (Tap) para ejecutar comando y mantener (Hold) para cambiar de capa.
+## Materiales (BOM)
 
-### Capa 0: Control Multimedia (Luz Verde)
-Configuración predeterminada al iniciar el dispositivo.
+-Microcontrolador (Seeed XIAO RP2040).
 
-| Ubicación | Interruptor | Acción (Pulsación) | Acción (Mantener) |
-| :--- | :--- | :--- | :--- |
-| **Sup. Izq.** | **SW1** | Reproducir / Pausar | **Activar Capa 1** |
-| **Sup. Der.** | **SW2** | Siguiente Pista | - |
-| **Inf. Izq.** | **SW3** | Bajar Volumen | - |
-| **Inf. Der.** | **SW4** | Subir Volumen | - |
+-4 Interruptores mecánicos.
 
-### Capa 1: Productividad (Luz Azul)
-Configuración para flujo de trabajo en entorno Windows.
+-4 Keycaps.
 
-| Ubicación | Interruptor | Acción (Pulsación) | Acción (Mantener) |
-| :--- | :--- | :--- | :--- |
-| **Sup. Izq.** | **SW1** | Deshacer (Ctrl+Z) | **Retornar a Capa 0** |
-| **Sup. Der.** | **SW2** | Cambiar Ventana (Alt+Tab) | - |
-| **Inf. Izq.** | **SW3** | Copiar (Ctrl+C) | - |
-| **Inf. Der.** | **SW4** | Pegar (Ctrl+V) | - |
+-2 LEDs (SK6812 MINI-E).
 
----
+-Carcasa impresa en 3D.
 
-## Autor
-pedrootriana
+-4 Tornillos M3.
+
+-5 4 Tuercas M3.
+
+## Instalación del codigo
+
+-Conectar la placa al ordenador.
+
+-Instalar CircuitPython.
+
+-Copiar la carpeta kmk y el archivo main.py.
+
+## Creditos
+Hecho por **pedrootriana** para Hack Club Blueprint.
