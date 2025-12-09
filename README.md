@@ -37,6 +37,8 @@ Lista de componentes necesarios para construir este proyecto:
 | 2 | **LEDs RGB** | Modelo SK6812 MINI-E (NeoPixel). |
 | 1 | **Carcasa 3D** | Impresa en PLA o PETG. |
 | 1 | **Cable USB-C** | Para conectar al PC. |
+| 4 | **Tornillos M3** | 16mm de largo (Cabeza Allen o Philips). |
+| 4 | **Tuercas M3** | Tuercas hexagonales estándar. |
 
 ---
 
