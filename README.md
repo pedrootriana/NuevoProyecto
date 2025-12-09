@@ -25,7 +25,7 @@ Scheme was made with kiCAD, it was my first time using it.
 
 The PCB was also made with KiCAD.
 
-<img width="596" height="749" alt="Captura de pantalla 2025-12-09 124839" src="https://github.com/user-attachments/assets/e93c7547-c008-4b5e-88b2-2d90357833dc" />
+<img width="394" height="566" alt="image" src="https://github.com/user-attachments/assets/35b80dec-a14c-470e-95a1-fce42a6a75a1" />
 
 ## Materials (BOM)
 
